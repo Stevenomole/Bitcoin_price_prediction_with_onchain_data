@@ -3,8 +3,8 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 import numpy as np
 import pandas as pd
-from tensorflow.keras.models import load_model
-from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.models import load_model # type: ignore
+from tensorflow.keras.optimizers import Adam # type: ignore
 from utils.project_functions import load_data, f1_score
 from data.data_preparation import load_preprocessed_data
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score as skl_f1_score, roc_auc_score, matthews_corrcoef
@@ -34,13 +34,3 @@ def predict(model_path, data_path, timesteps):
     print("F1-score:", skl_f1_score(y_test, y_pred))
     print("AUC-ROC Score:", roc_auc_score(y_test, y_pred))
     print("MCC:", matthews_corrcoef(y_test, y_pred))
-  
-def main():
-    model_path = 'model_save/cnn_lstm_model.keras'
-    data_path = 'data/processed/preprocessed_data.pkl'
-    timesteps = 5
-    
-    predict(model_path, data_path, timesteps)
-
-if __name__ == "__main__":
-    main()

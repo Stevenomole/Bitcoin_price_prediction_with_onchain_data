@@ -4,10 +4,10 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 import random
 import numpy as np
 import tensorflow as tf
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, Dropout
-from tensorflow.keras import metrics
-from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.models import Sequential # type: ignore
+from tensorflow.keras.layers import Dense, Dropout # type: ignore
+from tensorflow.keras import metrics # type: ignore
+from tensorflow.keras.optimizers import Adam # type: ignore
 from tcn import TCN
 from utils.project_functions import reset_random_seeds, f1_score
 

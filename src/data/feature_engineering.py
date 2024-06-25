@@ -48,14 +48,3 @@ def save_selected_features(df, features_selected, output_path):
         print(f"Selected features saved to {output_path}")
     except Exception as e:
         print(f"Error saving selected features: {e}")
-
-if __name__ == "__main__":
-    input_path = "data/processed/preprocessed_data.csv"
-    output_path = "data/processed/Boruta_data.csv"
-    
-    df = load_data(input_path)
-    if df is not None:
-        y = create_binary_classification(df)
-        features_selected, features_selected_tentative = select_features(df, y)
-        print('Features selected:', features_selected)
-        save_selected_features(df, features_selected, output_path)

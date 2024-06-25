@@ -15,7 +15,6 @@ def get_requirements(file_path:str)->List[str]:
     
     return requirements
 
-
 setup(
     name="bitcoin_price_prediction",
     version="0.1",
@@ -27,7 +26,7 @@ setup(
     install_requires= get_requirements("requirements.txt"),
     entry_points={
         "console_scripts": [
-            "bitcoin_price_prediction=src.main:main",
+            "bitcoin_price_prediction=main:main",
         ],
     },
     

@@ -1,6 +1,6 @@
 import pandas as pd
 import tensorflow as tf
-from tensorflow.keras import backend as K
+from tensorflow.keras import backend as K # type: ignore
 
 def load_data(file_path):
     """

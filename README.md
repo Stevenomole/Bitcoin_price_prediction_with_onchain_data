@@ -10,9 +10,7 @@ This project aims to predict Bitcoin prices using various machine learning model
 bitcoin_price_prediction_with_onchain_data/
 ├── data/
 │   ├── raw/
-│   ├── data_cleaning.py
-│   ├── data_preparation.py
-│   └── feature_engineering.py
+│   │   ├── bitcoin_data.csv
 ├── src/
 │   ├── data/
 │   │   ├── __init__.py

@@ -15,10 +15,26 @@ bitcoin_price_prediction_with_onchain_data/
 │   └── feature_engineering.py
 ├── src/
 │   ├── data/
+│   │   ├── __init__.py
+│   │   ├── data_cleaning.py
+│   │   ├── data_preparation.py
+│   │   └── feature_engineering.py
+│   ├── evaluation/
 │   ├── models/
+│   │   ├── __init__.py
+│   │   ├── cnn_lstm_model.py
+│   │   ├── lstnet_model.py
+│   │   ├── predict.py
+│   │   ├── tcn_model.py
+│   │   └── train.py
 │   ├── utils/
+│   │   ├── __init__.py
+│   │   └── project_functions.py
 │   └── main.py
+├── .gitignore
 ├── README.md
+├── requirements.txt
+└── setup.py
 ```
 
 ## Getting Started
